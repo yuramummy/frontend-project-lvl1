@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import nameDeterminer from '/Users/yuramummy/frontend-project-lvl1/src/cli.js';
+import nameDeterminer from '../src/cli';
 
-console.log("Welcome to the Brain Games!");
+console.log('Welcome to the Brain Games! ');
 
 console.log(nameDeterminer());
