@@ -4,10 +4,10 @@ import { userName, greetings } from '../index.js';
 console.log(greetings());
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const getRandom = (min, max) => {
+export const getRandom = (min, max) => { // Функция получения рандомного числа.
   Math.ceil(min);
   Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min; // Максимум и минимум включаются.
 };
 
 const questions = [getRandom(0, 50), getRandom(0, 50), getRandom(0, 50)];
