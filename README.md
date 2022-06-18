@@ -9,3 +9,5 @@ https://asciinema.org/a/501335
 https://asciinema.org/a/OK3Bs0TBTN4YJpOGVIwpJiZ1T
 
 https://asciinema.org/a/502104
+
+https://asciinema.org/a/502579
