@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/yuramummy/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/yuramummy/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/850b17f0883ba9dc9e5b/maintainability)](https://codeclimate.com/github/yuramummy/frontend-project-lvl1/maintainability)
 
 
 ### Hexlet frontend-project-1:
