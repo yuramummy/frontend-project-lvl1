@@ -8,7 +8,7 @@
 ### Hexlet frontend-project-1:
 
 <h1>Brain Games</h1>
-<p>'Brain Games' includes five games. The player has to answer three questions correctly, in case of an error the game is stopped.</p>
+<p>'Brain Games' includes five games. The player has to answer three questions correctly, in case of error the game will stop.</p>
 
 ## Setup
 To setup games clone this repository and enter the commands:
