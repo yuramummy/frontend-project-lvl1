@@ -1,5 +1,6 @@
 import require from 'readline-sync';
-import { userName, greetings, getRandom } from '../index.js';
+import { userName, greetings } from '../index.js';
+import getRandom from '../getrandom.js';
 
 console.log(greetings());
 console.log('What is the result of the expression?');
@@ -31,5 +32,7 @@ const brainCalcGame = () => {
   }
   return `Congratulations, ${userName}!`;
 };
+
+// console.log(brainCalcGame());
 
 export default brainCalcGame;

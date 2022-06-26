@@ -1,14 +1,9 @@
 import require from 'readline-sync';
 import { userName, greetings } from '../index.js';
+import getRandom from '../getrandom.js';
 
 console.log(greetings());
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-export const getRandom = (min, max) => { // Функция получения рандомного числа.
-  Math.ceil(min);
-  Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; // Максимум и минимум включаются.
-};
 
 const questions = [getRandom(0, 50), getRandom(0, 50), getRandom(0, 50)];
 
