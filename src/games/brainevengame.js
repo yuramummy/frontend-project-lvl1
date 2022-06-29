@@ -1,11 +1,5 @@
-import require from 'readline-sync';
-import { userName, greetings } from '../index.js';
+import launcher from '../index.js';
 import getRandom from '../getrandom.js';
-
-console.log(greetings());
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-const questions = [getRandom(0, 50), getRandom(0, 50), getRandom(0, 50)];
 
 const isEven = (num) => {
   if (num % 2 === 0) {
@@ -14,16 +8,16 @@ const isEven = (num) => {
   return 'no';
 };
 
+const inputData = () => {
+  const num = getRandom(0, 50);
+  const roundQuestion = `Qestion: ${num}`;
+  const correctAnswer = isEven(num).toString();
+  return [roundQuestion, correctAnswer];
+};
+
 const brainEvenGame = () => {
-  for (let i = 0; i < questions.length; i += 1) {
-    console.log(`Question: ${questions[i]}`);
-    const answer = require.question('');
-    if (answer !== isEven(questions[i])) {
-      return `"${answer}" is wrong answer ;(. Correct answer was "${isEven(questions[i])}".\nLet's try again, ${userName}!`;
-    }
-    console.log('Correct!');
-  }
-  return `Congratulations, ${userName}!`;
+  const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
+  launcher(gameTask, inputData);
 };
 
 export default brainEvenGame;
