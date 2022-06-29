@@ -1,43 +1,41 @@
-import require from 'readline-sync';
-import { userName, greetings } from '../index.js';
+import launcher from '../index.js';
 import getRandom from '../getrandom.js';
 
-console.log(greetings());
-console.log('What number is missing in the progression?');
+const getProgression = (startOfProgression, stepOfProgression, lengthOfProgression) => {
+  const progression = [];
+  let firstNumber = startOfProgression;
+  while (progression.length < lengthOfProgression) {
+    progression.push(firstNumber);
+    firstNumber += stepOfProgression;
+  }
+  return progression; // формирование прогрессии
+};
+
+const getQuestion = (progression, hiddenNumberIndex) => { // формирование вопроса
+  let result = '';
+  for (let i = 0; i < progression.length; i += 1) {
+    if (i === hiddenNumberIndex) {
+      result = `${result} ..`;
+    } else result = `${result} ${progression[i]}`;
+  }
+  return result;
+};
+
+const inputData = () => {
+  const startOfProgression = getRandom(1, 10); // определяем начало прогрессии
+  const stepOfProgression = getRandom(2, 10); // шаг прогресии
+  const lengthOfProgression = getRandom(5, 10); // длина прогресии
+  const progression = getProgression(startOfProgression, stepOfProgression, lengthOfProgression);
+  const hiddenNumberIndex = getRandom(0, progression.length - 1); // индекс скрытого числа
+  const hiddenNumber = progression[hiddenNumberIndex]; // скрытое число = правильный ответ
+  const roundQuestion = `${getQuestion(progression, hiddenNumberIndex)}`;
+  const correctAnswer = hiddenNumber.toString();
+  return [roundQuestion, correctAnswer];
+};
 
 const brainProgressionGame = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const progression = () => { // формируем рандомную прогрессию
-      const array = [];
-      let startOfProgression = getRandom(1, 10); // определяем начало прогрессии
-      const randomIncrease = getRandom(2, 10); // рандомное увеличение прогресии
-      const randomLength = getRandom(5, 10); // рандомная длина прогресии
-      while (array.length < randomLength) {
-        array.push(startOfProgression);
-        startOfProgression += randomIncrease;
-      }
-      return array;
-    };
-
-    const question = progression();
-    const hiddenNumber = question[getRandom(0, question.length - 1)]; // определяем скрытое число
-    const newArray = () => { // формируем строчку со скрытым числом
-      let result = '';
-      question[question.indexOf(hiddenNumber)] = '..';
-      for (let item = 0; item < question.length; item += 1) {
-        result = `${result}${question[item]} `;
-      }
-      return result;
-    };
-
-    console.log(`Question: ${newArray()}`);
-    const answer = require.question('');
-    if (answer !== hiddenNumber.toString()) {
-      return `"${answer}" is wrong answer ;(. Correct answer was "${hiddenNumber}".\nLet's try again, ${userName}!`;
-    }
-    console.log('Correct!');
-  }
-  return `Congratulations, ${userName}!`;
+  const gameTask = 'What number is missing in the progression?';
+  launcher(gameTask, inputData);
 };
 
 export default brainProgressionGame;
