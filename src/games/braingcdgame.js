@@ -14,7 +14,7 @@ const greatestCommonDivisor = (div1, div2) => {
 const inputData = () => {
   const num1 = getRandom(0, 50);
   const num2 = getRandom(0, 50);
-  const roundQuestion = `Qestion: ${num1} ${num2}`;
+  const roundQuestion = `${num1} ${num2}`;
   const correctAnswer = greatestCommonDivisor(num1, num2).toString();
   return [roundQuestion, correctAnswer];
 };
