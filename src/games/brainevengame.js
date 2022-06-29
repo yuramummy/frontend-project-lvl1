@@ -1,17 +1,12 @@
 import launcher from '../index.js';
 import getRandom from '../getrandom.js';
 
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
+const isEven = (num) => (num % 2 === 0);
 
 const inputData = () => {
   const num = getRandom(0, 50);
   const roundQuestion = `Qestion: ${num}`;
-  const correctAnswer = isEven(num).toString();
+  const correctAnswer = isEven(num) ? 'yes' : 'no';
   return [roundQuestion, correctAnswer];
 };
 
