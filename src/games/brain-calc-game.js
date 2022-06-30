@@ -1,4 +1,4 @@
-import launcher from '../index.js';
+import launchGame from '../index.js';
 import getRandom from '../getrandom.js';
 
 const calculator = (num1, num2, operator) => {
@@ -24,7 +24,7 @@ const getInputData = () => {
 
 const brainCalcGame = () => {
   const gameTask = 'What is the result of the expression?';
-  launcher(gameTask, getInputData);
+  launchGame(gameTask, getInputData);
 };
 
 export default brainCalcGame;

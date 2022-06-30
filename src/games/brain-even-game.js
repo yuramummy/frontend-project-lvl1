@@ -1,4 +1,4 @@
-import launcher from '../index.js';
+import launchGame from '../index.js';
 import getRandom from '../getrandom.js';
 
 const isEven = (num) => (num % 2 === 0);
@@ -12,7 +12,7 @@ const getInputData = () => {
 
 const brainEvenGame = () => {
   const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
-  launcher(gameTask, getInputData);
+  launchGame(gameTask, getInputData);
 };
 
 export default brainEvenGame;
