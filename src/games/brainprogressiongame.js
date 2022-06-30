@@ -10,10 +10,10 @@ const getProgression = (startOfProgression, stepOfProgression, lengthOfProgressi
   const hiddenNumberIndex = getRandom(0, lengthOfProgression - 1);
   for (let i = 0; i < lengthOfProgression; i += 1) {
     if (i === hiddenNumberIndex) {
-      roundQuestion += ' ..';
+      roundQuestion += '.. ';
       hiddenNumber = firstNumber.toString();
     } else {
-      roundQuestion = `${roundQuestion} ${firstNumber.toString()}`;
+      roundQuestion += (`${firstNumber.toString()} `);
     }
     firstNumber += stepOfProgression;
   } //  на выходе получаем прогрессию для вопроса и скрытое число = правильный ответ
