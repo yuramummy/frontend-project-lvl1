@@ -19,7 +19,7 @@ const isPrime = (number) => {
 
 const inputData = () => {
   const number = getRandom(1, 50);
-  const roundQuestion = `${number}`;
+  const roundQuestion = number.toString();
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [roundQuestion, correctAnswer];
 };
