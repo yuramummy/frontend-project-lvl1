@@ -1,13 +1,13 @@
 import require from 'readline-sync';
 
-const launcher = (gameTask, inputData) => {
+const launchGame = (gameTask, getInputData) => {
   const userName = require.question('Welcome to the Brain Games!\nMay I have your name? ');
   const roundCounter = 3;
   console.log(`Hello, ${userName}!`);
   console.log(gameTask);
 
   for (let i = 0; i < roundCounter; i += 1) {
-    const [roundQuestion, correctAnswer] = inputData();
+    const [roundQuestion, correctAnswer] = getInputData();
     console.log(`Question: ${roundQuestion}`);
     const userAnswer = require.question('');
     if (userAnswer !== correctAnswer) {
@@ -19,4 +19,4 @@ const launcher = (gameTask, inputData) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default launcher;
+export default launchGame;
