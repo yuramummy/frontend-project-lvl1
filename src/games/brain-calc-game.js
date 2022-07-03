@@ -14,7 +14,7 @@ const calculator = (num1, num2, operator) => {
 
 const getInputData = () => {
   const operators = ['*', '+', '-'];
-  const operator = operators[getRandom(0, 2)];
+  const operator = operators[getRandom(0, operators.length - 1)];
   const num1 = getRandom(0, 30);
   const num2 = getRandom(0, 30);
   const roundQuestion = `${num1} ${operator} ${num2}`;
