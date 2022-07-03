@@ -24,7 +24,7 @@ To start the game enter the command:
 ```sh
 brain-even
 ```
-https://asciinema.org/a/501335
+https://asciinema.org/a/sojTFWy73xwiEeFM2WAyHn3tf
 
 ## Brain-calc
 The user is shown a random mathematical expression that needs to be calculated and the correct answer written down.
@@ -33,7 +33,7 @@ To start the game enter the command:
 ```sh
 brain-calc
 ```
-https://asciinema.org/a/OK3Bs0TBTN4YJpOGVIwpJiZ1T
+https://asciinema.org/a/OeA7auxTR2ZwuWObyufYTK8lI
 
 ## Brain-gcd
 The user is shown two random numbers. The user must calculate and enter the greatest common divisor of these numbers.
@@ -42,7 +42,7 @@ To start the game enter the command:
 ```sh
 brain-gcd
 ```
-https://asciinema.org/a/502104
+https://asciinema.org/a/KtRtDXtzI78VWtqWIE3fH5IL1
 
 ## Brain-progression
 The user is shown a series of numbers forming an arithmetic progression, with one number missing. The user must determine this number.
@@ -51,7 +51,7 @@ To start the game enter the command:
 ```sh
 brain-progression
 ```
-https://asciinema.org/a/502579
+https://asciinema.org/a/UDBDlMJuSZaBoOr8LmvS3hnze
 
 ## Brain-prime
 The user is shown a random number. And he needs to answer 'yes' if the number is prime, or 'no' otherwise.
@@ -60,4 +60,4 @@ To start the game enter the command:
 ```sh
 brain-prime
 ```
-https://asciinema.org/a/WqzooriaprM7R6sIv5LrAiXjN
+https://asciinema.org/a/05VlAozy6DgYkLGTaC78gc4qZ
