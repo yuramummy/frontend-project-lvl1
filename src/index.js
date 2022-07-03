@@ -9,7 +9,7 @@ const launchGame = (gameTask, getInputData) => {
   for (let i = 0; i < roundCounter; i += 1) {
     const [roundQuestion, correctAnswer] = getInputData();
     console.log(`Question: ${roundQuestion}`);
-    const userAnswer = require.question('');
+    const userAnswer = require.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`);
       return;
